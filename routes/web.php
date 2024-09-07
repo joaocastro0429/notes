@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\test;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -13,3 +14,6 @@ Route::get('/about',function(){
 });
 
 Route::get('/main',[MainController::class ,'index']);
+// utilizando parametro 
+Route::get('/test/{value}',[test::class,'test']);
+
